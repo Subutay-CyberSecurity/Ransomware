@@ -1,59 +1,56 @@
-# Ransomware Simulation Tool
+# 🔐 Ransomware Simulation Tool
 
-## Description
-This project is a simple ransomware simulation tool that encrypts and decrypts files using the AES encryption algorithm.  
-It targets specific file extensions, encrypts files by appending the `.enc` extension, and securely deletes the original files.  
-Decryption restores the original files and removes the encrypted versions.
-
-**WARNING:**  
-This tool is intended for educational and testing purposes only.  
-Using it in real environments or for malicious purposes is illegal and can have serious consequences.
+> ⚠️ **WARNING:**  
+> This tool is for **educational and ethical hacking purposes only**.  
+> **Do NOT** use it on any system or data without **explicit permission**.  
+> Misuse may result in **legal consequences**.  
+> Author assumes **no responsibility** for damages caused by improper use.
 
 ---
 
-## Features
+## 📘 Description
 
-- AES-256 encryption with CBC mode  
-- Encrypts and decrypts files with specific extensions (office documents, media files, archives, etc.)  
-- Secure file deletion by overwriting files with random data before removal  
-- Simple command-line interface  
-- Generate a new AES key or load an existing one (hex format)  
-- Recursively process directories and their subdirectories  
-- Excludes system folders and important files from encryption/decryption to avoid damage
+This project is a simple ransomware **simulation** tool that uses **AES-256 encryption** to lock files and securely delete originals.  
+Decryption restores encrypted files if the correct key is provided.
 
 ---
 
-## Supported File Extensions
+## ✨ Features
 
-- Office Documents: `.docx`, `.doc`, `.xlsx`, `.xls`, `.pptx`, `.ppt`, `.pdf`, `.txt`, `.rtf`, `.csv`, `.log`  
-- Data Formats: `.xml`, `.json`, `.html`, `.htm`, `.pub`, `.vsd`, `.vsdx`  
-- Databases & Backups: `.mdb`, `.accdb`, `.sql`, `.bak`, `.qbw`, `.qbb`  
-- Adobe Files: `.psd`, `.ai`, `.indd`  
-- Images: `.jpeg`, `.jpg`, `.png`, `.gif`, `.tiff`, `.tif`, `.bmp`  
-- Audio & Video: `.mp3`, `.wav`, `.mp4`, `.avi`, `.mov`, `.wmv`  
-- Archives: `.zip`, `.rar`, `.7z`, `.tar`, `.gz`, `.tgz`, `.bz2`, `.xz`  
-- Disk Images & Virtual Machines: `.iso`, `.vmdk`, `.vhd`, `.vhdx`  
-- Outlook Files: `.ost`, `.pst`  
+✅ AES-256 (CBC mode) encryption  
+✅ Secure deletion by overwriting files with random data  
+✅ Decrypt previously encrypted files  
+✅ Targeted file extensions  
+✅ Excludes critical system folders  
+✅ Simple interactive CLI  
+✅ Create or load custom AES key (hex format)  
 
 ---
 
-## Excluded Directories and Files
+## 📂 Supported File Types
 
-The program automatically skips these directories and files to avoid encrypting system or critical files:
-
-**Directories:**  
-`venv`, `__pycache__`, `.git`, `node_modules`, `$recycle.bin`, `system volume information`, `program files`, `windows`, `boot`, `recovery`, `drivers`, `etc`, `dev`, `proc`, `sys`, `run`, `tmp`, `var`, `mnt`, `media`, `usr`, `lib`, `bin`, `sbin`, `opt`, `srv`, `root`, `lost+found`, `downloads`
-
-**Files:**  
-`ransomware.py`, `ransomware.py.enc`, `desktop.ini`, `thumbs.db`
+📝 Documents: `.docx`, `.doc`, `.xlsx`, `.xls`, `.pptx`, `.pdf`, `.txt`, `.csv`, etc.  
+🖼️ Media: `.jpg`, `.png`, `.mp3`, `.mp4`, `.avi`, etc.  
+🗃️ Archives: `.zip`, `.rar`, `.7z`, `.tar`, `.gz`, etc.  
+🧠 Backups & Databases: `.sql`, `.bak`, `.accdb`, `.pst`, `.ost`, `.vmdk`, etc.
+(Top 300 Most Popular File Types)
 
 ---
 
-## Installation
+## 🚫 Automatically Excluded
 
-1. Clone the repository or download the source code.
-2. Make sure you have Python 3.6 or higher installed.
-3. Install required dependencies using pip:
+📁 **Directories:**  
+`venv`, `.git`, `__pycache__`, `node_modules`, `windows`, `etc`, `sys`, etc.
+
+📄 **Files:**  
+`ransomware.py`, `desktop.ini`, `thumbs.db`, encrypted script itself
+
+---
+
+## ⚙️ Installation
+
+1. 🧱 Make sure you have **Python 3.6+** installed.
+2. 📦 Install dependencies:
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
